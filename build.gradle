@@ -1,0 +1,18 @@
+buildscript { repositories { jcenter() } }
+
+plugins {
+    id 'java'
+    id 'nebula.lint' version '6.1.0'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'com.google.guava:guava:18.0'
+    compile 'com.google.guava:guava-jdk5:16.0'
+}
+
+gradleLint.rules += 'duplicate-dependency-class'
+
